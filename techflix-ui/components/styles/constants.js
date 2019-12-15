@@ -20,3 +20,9 @@ export const FONT = {
         'font-size': '20px',
     }
 };
+
+export const CONTENT_WIDTH = 1000;
+
+export const MARGIN = {
+    'small': 10,
+};

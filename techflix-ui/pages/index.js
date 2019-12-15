@@ -2,34 +2,29 @@ import React from "react";
 import {Page} from "../components/page";
 import {WelcomeBanner} from "../components/welcomeBanner";
 import {CardGrid} from "../components/cardGrid";
-
-const dummyCard = {
-    'width': '192px',
-    'background': 'white',
-    'height': '280px',
-};
+import {Card} from "../components/card";
 
 const cards = [
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
-    <div style={dummyCard}/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
 ];
 
 export default function Index() {
