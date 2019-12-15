@@ -35,6 +35,14 @@ const profileImageStyle = {
     ...imageFillsParent(),
 };
 
+const buttonStyle = {
+    ...FONT.button,
+    'padding': `${MARGIN.small}px ${MARGIN.large}px`,
+    'border': `${COLORS.primary} 1px solid`,
+    'margin-top': `${MARGIN.small}px`,
+    'display': 'inline-block',
+};
+
 export function Hero(props) {
     return (
         <section style={heroSectionStyle}>
@@ -43,6 +51,7 @@ export function Hero(props) {
                 <img style={profileImageStyle} src={props.profile}/>
             </div>
             <h1 style={titleStyle}>{props.title}</h1>
+            <a style={buttonStyle} href={"http://localhost:3001/1"}>Watch Now</a>
         </section>
     );
 }

@@ -23,6 +23,13 @@ export const FONT = {
         'font-size': '20px',
         'color': COLORS.foreground,
     },
+    'button': {
+        'font-family': DEFAULT_FONT,
+        'font-size': '20px',
+        'text-transform': 'uppercase',
+        'text-decoration': 'none',
+        'color': COLORS.primary,
+    },
     'label': {
         'font-family': DEFAULT_FONT,
         'font-size': '16px',
@@ -36,4 +43,5 @@ export const CONTENT_WIDTH = 1000;
 export const MARGIN = {
     'small': 10,
     'medium': 20,
+    'large': 40,
 };
