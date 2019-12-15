@@ -1,6 +1,7 @@
 import React from 'react';
 import {imageFillsParent} from "./styles/mixins";
 import {FONT, MARGIN} from "./styles/constants";
+import Link from "next/link";
 
 const cardStyle = {
     'overflow': 'hidden',
@@ -24,9 +25,13 @@ const nameStyle = {
 
 export function Card(props) {
     return (
-        <div style={cardStyle}>
-            <img style={imageStyle} src={props.image}/>
-            {props.name && <div style={nameStyle}>{props.name}</div>}
-        </div>
+        <Link href={props.href}>
+            <a>
+                <div style={cardStyle}>
+                    <img style={imageStyle} src={props.image}/>
+                    {props.name && <div style={nameStyle}>{props.name}</div>}
+                </div>
+            </a>
+        </Link>
     );
 }
