@@ -17,8 +17,8 @@ function Film(props) {
 
     return (
         <Page>
-            <Hero title={props.title} banner={"https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg"} profile={"https://m.media-amazon.com/images/M/MV5BN2Q3OTk3ZWItN2RiOC00MTk5LThjYzMtMGUxZDE4YTBmMGU3XkEyXkFqcGdeQXVyMjM0NDg3NTE@._V1_SY1000_CR0,0,675,1000_AL_.jpg"}/>
-            <FilmInfo/>
+            <Hero title={props.title} banner={props.bannerImage} profile={props.profileImage}/>
+            <FilmInfo synopsis={props.synopsis} releaseDate={props.releaseDate} director={props.director}/>
             <CardRow title={"Cast"} cards={actors}/>
         </Page>
     );
@@ -26,7 +26,15 @@ function Film(props) {
 
 Film.getInitialProps = ({ query} ) => {
     return {
-        title: 'Star Wars: The Rise of Skywalker',
+        title: "Star Wars: The Rise of Skywalker",
+        synopsis: "The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.",
+        releaseDate: "19th December 2019",
+        bannerImage: "https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg",
+        profileImage: "https://m.media-amazon.com/images/M/MV5BN2Q3OTk3ZWItN2RiOC00MTk5LThjYzMtMGUxZDE4YTBmMGU3XkEyXkFqcGdeQXVyMjM0NDg3NTE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+        director: {
+            name: "J.J. Abrams",
+            page: "/people/1"
+        }
     }
 };
 
