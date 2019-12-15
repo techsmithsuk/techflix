@@ -1,10 +1,8 @@
 import React from 'react';
+import {imageFillsParent} from "./styles/mixins";
 
 const imageStyle = {
-    'width': '100%',
-    'height': '100%',
-    'object-fit': 'cover',
-    'object-position': 'center',
+    ...imageFillsParent()
 };
 
 export function Card() {

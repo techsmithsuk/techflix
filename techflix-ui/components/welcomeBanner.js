@@ -1,5 +1,6 @@
 import React from 'react';
 import {COLORS, FONT} from "./styles/constants";
+import {imageFillsParent} from "./styles/mixins";
 
 const welcomeBannerStyle = {
     'height': '400px',
@@ -7,10 +8,7 @@ const welcomeBannerStyle = {
 };
 
 const imageStyle = {
-    'height': '100%',
-    'width': '100%',
-    'object-fit': 'cover',
-    'object-position': 'center',
+    ...imageFillsParent()
 };
 
 const messageStyle = {
