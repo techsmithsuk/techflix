@@ -1,5 +1,5 @@
 import React from 'react';
-import {COLORS, CONTENT_WIDTH, FONT, MARGIN} from "./styles/constants";
+import {CONTENT_WIDTH, FONT, MARGIN} from "./styles/constants";
 
 const ITEMS_PER_ROW = 5;
 const CARD_MARGIN = MARGIN.small;
@@ -19,9 +19,17 @@ const sectionTitleStyle = {
 const listStyle = {
     'list-style': 'none',
     'padding': '0',
-    'margin': `-${CARD_MARGIN}px`,
     'display': 'flex',
+    'margin': `-${CARD_MARGIN}px`,
+};
+
+const gridStyle = {
+    ...listStyle,
     'flex-wrap': 'wrap',
+};
+
+const rowStyle = {
+    ...listStyle,
 };
 
 const cardStyle = {
@@ -31,11 +39,21 @@ const cardStyle = {
 };
 
 export function CardGrid(props) {
-    console.log('card margin');
     return (
         <section style={sectionStyle}>
             <h2 style={sectionTitleStyle}>{props.title}</h2>
-            <ol style={listStyle}>
+            <ol style={gridStyle}>
+                {props.cards.map(card => <li style={cardStyle}>{card}</li>)}
+            </ol>
+        </section>
+    );
+}
+
+export function CardRow(props) {
+    return (
+        <section style={sectionStyle}>
+            <h2 style={sectionTitleStyle}>{props.title}</h2>
+            <ol style={rowStyle}>
                 {props.cards.map(card => <li style={cardStyle}>{card}</li>)}
             </ol>
         </section>
