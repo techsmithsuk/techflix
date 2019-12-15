@@ -6,11 +6,13 @@ import {NavBar} from "../NavBar/NavBar";
 
 export function App(): ReactElement {
   return (
-    <Router>
-      <NavBar/>
-      <Switch>
-        <Route path="/:filmId" component={PlayerPage}/>
-      </Switch>
+    <Router>-
+      <main className="mainContent">
+        <NavBar/>
+        <Switch>
+          <Route path="/:filmId" component={PlayerPage}/>
+        </Switch>
+      </main>
     </Router>
   );
 }
