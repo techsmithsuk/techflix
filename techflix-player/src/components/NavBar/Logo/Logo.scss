@@ -1,0 +1,16 @@
+@import "../../../styles/constants";
+
+.Logo {
+  height: 100%;
+
+  .letter {
+    fill: $color-primary;
+    font-family: $default-font;
+    stroke-width: 0;
+    font-size: 122px;
+  }
+
+  .ellipse {
+    fill: $color-background;
+  }
+}

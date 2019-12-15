@@ -1,0 +1,7 @@
+@import './constants';
+
+@mixin titleFont() {
+  font-family: $default-font;
+  font-size: 32px;
+  color: $color-foreground
+}
