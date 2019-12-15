@@ -14,6 +14,10 @@
     padding: 0;
     color: $color-foreground;
     transition: 0.2s ease all;
+
+    &:active, &:focus, &:hover {
+      border-color: $color-primary;
+    }
   }
 
   .submitButton {
@@ -29,11 +33,5 @@
   .visuallyHidden {
     position: absolute;
     visibility: hidden;
-  }
-
-  &:active, &:focus, &:hover {
-    .searchInput {
-      border-color: $color-primary;
-    }
   }
 }
