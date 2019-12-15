@@ -38,9 +38,9 @@ const profileImageStyle = {
 export function Hero(props) {
     return (
         <section style={heroSectionStyle}>
-            <img style={imageStyle} src="https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg"/>
+            <img style={imageStyle} src={props.banner}/>
             <div style={profileImageContainer}>
-                <img style={profileImageStyle} src={"https://m.media-amazon.com/images/M/MV5BN2Q3OTk3ZWItN2RiOC00MTk5LThjYzMtMGUxZDE4YTBmMGU3XkEyXkFqcGdeQXVyMjM0NDg3NTE@._V1_SY1000_CR0,0,675,1000_AL_.jpg"}/>
+                <img style={profileImageStyle} src={props.profile}/>
             </div>
             <h1 style={titleStyle}>{props.title}</h1>
         </section>
