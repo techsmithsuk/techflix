@@ -3,7 +3,7 @@ import {COLORS, FONT} from "./styles/constants";
 
 const welcomeBannerStyle = {
     'height': '400px',
-    'position': 'fixed',
+    'position': 'relative',
 };
 
 const imageStyle = {
@@ -34,12 +34,12 @@ const descriptionStyle = {
 
 export function WelcomeBanner() {
     return (
-        <div style={welcomeBannerStyle}>
+        <section style={welcomeBannerStyle}>
             <img style={imageStyle} src="https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg"/>
             <div style={messageStyle}>
                 <h1 style={titleStyle}>Star Wars: The Rise of Skywalker</h1>
                 <p style={descriptionStyle}>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.</p>
             </div>
-        </div>
+        </section>
     );
 }

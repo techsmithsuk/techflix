@@ -11,6 +11,10 @@ export const FONT = {
         'font-family': DEFAULT_FONT,
         'font-size': '32px',
     },
+    'subtitle': {
+        'font-family': DEFAULT_FONT,
+        'font-size': '28px',
+    },
     'body': {
         'font-family': DEFAULT_FONT,
         'font-size': '20px',
