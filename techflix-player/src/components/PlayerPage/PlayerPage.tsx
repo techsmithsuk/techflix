@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import {VideoPlayer} from "../VideoPlayer/VideoPlayer";
+import {VideoPlayer} from "./VideoPlayer/VideoPlayer";
 
 export function PlayerPage(): ReactElement {
     return (
