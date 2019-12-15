@@ -6,7 +6,7 @@ import {NavBar} from "../NavBar/NavBar";
 
 export function App(): ReactElement {
   return (
-    <Router>-
+    <Router>
       <main className="mainContent">
         <NavBar/>
         <Switch>
