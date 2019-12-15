@@ -13,6 +13,10 @@ const fontStyles = {
     'font-size': '122px'
 };
 
+const ellipseStyle = {
+    'fill': COLORS.background,
+};
+
 export function Logo() {
     return (
         <svg viewBox="0 0 580 140" style={logoStyles}>
@@ -24,7 +28,7 @@ export function Logo() {
             <text style={fontStyles} transform="matrix(1.1530002355575562,0,0,1.0201234623965676,-13.081520140171051,0.09531562066645638) " textAnchor="start" y="100.321161" x="350.027266" >L</text>
             <text style={fontStyles} transform="matrix(1.1530002355575562,0,0,0.911527038457353,-13.081520140171051,-1.644270820815989) " textAnchor="start" y="103.482948" x="217.329982" >H</text>
             <text style={fontStyles} transform="matrix(1.1530002355575562,0,0,0.8915252936192605,-13.081520140171051,-1.8467688870862111) " textAnchor="start" y="104.489975" x="287.581485" >F</text>
-            <ellipse ry="66.500001" rx="325.50001" cy="155.543746" cx="289.00001" strokeWidth="0"/>
+            <ellipse style={ellipseStyle} ry="66.500001" rx="325.50001" cy="155.543746" cx="289.00001" strokeWidth="0"/>
         </svg>
     );
 }
