@@ -3,7 +3,7 @@ package uk.co.techswitch.domain;
 import java.time.LocalDate;
 
 public class Film {
-    private int id;
+    private String id;
     private String title;
     private String summary;
     private LocalDate releaseDate;
@@ -11,7 +11,7 @@ public class Film {
     private String posterImage;
     private String video;
 
-    public Film(int id,
+    public Film(String id,
                 String title,
                 String summary,
                 LocalDate releaseDate,
@@ -27,7 +27,7 @@ public class Film {
         this.video = video;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

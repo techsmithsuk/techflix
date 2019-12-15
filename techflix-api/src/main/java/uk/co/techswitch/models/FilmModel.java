@@ -1,5 +1,6 @@
 package uk.co.techswitch.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import uk.co.techswitch.domain.Film;
 
 import java.time.LocalDate;
@@ -11,7 +12,7 @@ public class FilmModel {
         this.film = film;
     }
 
-    public int getId() {
+    public String getId() {
         return film.getId();
     }
 
@@ -23,7 +24,7 @@ public class FilmModel {
         return film.getSummary();
     }
 
-
+    @JsonFormat(pattern = "dd-MM-yyyy")
     public LocalDate getReleaseDate() {
         return film.getReleaseDate();
     }
