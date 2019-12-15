@@ -5,3 +5,9 @@
   font-size: 32px;
   color: $color-foreground
 }
+
+@mixin subtitleFont() {
+  font-family: $default-font;
+  font-size: 28px;
+  color: $color-foreground
+}

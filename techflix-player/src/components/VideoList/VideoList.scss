@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+@import "../../styles/constants";
+
+.VideoList {
+  .sectionTitle {
+    @include subtitleFont;
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    width: 100%;
+
+    * {
+      margin-left: $spacing-small;
+      width: calc((1000px - 4 * #{$spacing-small}) / 5);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

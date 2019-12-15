@@ -32,7 +32,6 @@ export function PlayerPage(): ReactElement {
         <div>
             <VideoPlayer title={"Star Wars: The Rise of Skywalker"} src={"https://www.youtube.com/embed/ssGXzh4MAYM"}/>
             <VideoList sectionTitle={"Related Films"} videos={relatedVideos}/>
-            <VideoList sectionTitle={"Related Films"} videos={relatedVideos}/>
             <VideoList sectionTitle={"Recommended For You"} videos={recommendedForYou}/>
             <VideoList sectionTitle={"Watch Again"} videos={watchAgain}/>
         </div>
