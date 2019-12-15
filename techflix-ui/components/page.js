@@ -1,7 +1,6 @@
 import React from 'react';
-import {NAV_BAR_HEIGHT, NavBar} from "./navBar";
-import {contentWidth} from "./styles/mixins";
-import {COLORS} from "./styles/constants";
+import {COLORS, CONTENT_WIDTH} from "./styles/constants";
+import {NavBar} from "./navBar";
 
 const pageStyle = {
     'background': COLORS.background,
@@ -9,7 +8,7 @@ const pageStyle = {
 };
 
 const contentStyle = {
-    'max-width': '1000px',
+    'max-width': `${CONTENT_WIDTH}px`,
     'margin': 'auto'
 };
 

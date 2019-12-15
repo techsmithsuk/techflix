@@ -14,7 +14,6 @@ const sectionStyle = {
 
 const sectionTitleStyle = {
     ...FONT.subtitle,
-    'color': COLORS.foreground,
 };
 
 const listStyle = {

@@ -22,12 +22,10 @@ const messageStyle = {
 
 const titleStyle = {
     ...FONT.title,
-    'color': COLORS.foreground
 };
 
 const descriptionStyle = {
     ...FONT.body,
-    'color': COLORS.foreground,
 };
 
 export function WelcomeBanner() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Page} from "../../components/page";
-import {COLORS, FONT} from "../../components/styles/constants";
 import {Hero} from "../../components/hero";
+import {FilmInfo} from "../../components/filmInfo";
 
 
 function Film(props) {
@@ -9,6 +9,7 @@ function Film(props) {
     return (
         <Page>
             <Hero title={props.title}/>
+            <FilmInfo/>
         </Page>
     );
 }

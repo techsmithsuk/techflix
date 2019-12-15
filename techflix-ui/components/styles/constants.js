@@ -1,7 +1,8 @@
 export const COLORS = {
     'background': '#000000',
     'foreground': '#FFFFFF',
-    'primary': '#E50914'
+    'primary': '#E50914',
+    'subtle': '#BBBBBB',
 };
 
 export const DEFAULT_FONT = "'Trebuchet MS', Gadget, sans-serif";
@@ -10,14 +11,23 @@ export const FONT = {
     'title': {
         'font-family': DEFAULT_FONT,
         'font-size': '32px',
+        'color': COLORS.foreground,
     },
     'subtitle': {
         'font-family': DEFAULT_FONT,
         'font-size': '28px',
+        'color': COLORS.foreground,
     },
     'body': {
         'font-family': DEFAULT_FONT,
         'font-size': '20px',
+        'color': COLORS.foreground,
+    },
+    'label': {
+        'font-family': DEFAULT_FONT,
+        'font-size': '16px',
+        'text-transform': 'uppercase',
+        'color': COLORS.subtle,
     }
 };
 
