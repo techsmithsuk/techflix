@@ -1,7 +1,7 @@
 package uk.co.techswitch.services;
 
 import uk.co.techswitch.models.FilmModel;
-import uk.co.techswitch.repos.FilmsRepo;
+import uk.co.techswitch.repos.LibraryApiClient;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 public class FilmsService {
     private static final int FILMS_PER_PAGE = 20;
 
-    private final FilmsRepo filmsRepo;
+    private final LibraryApiClient libraryApiClient;
 
-    public FilmsService(FilmsRepo filmsRepo) {
-        this.filmsRepo = filmsRepo;
+    public FilmsService(LibraryApiClient libraryApiClient) {
+        this.libraryApiClient = libraryApiClient;
     }
 
     public List<FilmModel> getFilms(int page) {
         int offset = FILMS_PER_PAGE * (page - 1);
-        return filmsRepo
+        return libraryApiClient
                 .getAllFilms(FILMS_PER_PAGE, offset)
                 .stream()
                 .map(FilmModel::new)

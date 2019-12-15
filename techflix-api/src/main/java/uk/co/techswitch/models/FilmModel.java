@@ -24,8 +24,7 @@ public class FilmModel {
         return film.getSummary();
     }
 
-    @JsonFormat(pattern = "dd-MM-yyyy")
-    public LocalDate getReleaseDate() {
+    public String getReleaseDate() {
         return film.getReleaseDate();
     }
 

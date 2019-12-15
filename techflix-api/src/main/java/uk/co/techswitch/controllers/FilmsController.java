@@ -1,7 +1,6 @@
 package uk.co.techswitch.controllers;
 
 import uk.co.techswitch.models.FilmModel;
-import uk.co.techswitch.repos.FilmsRepo;
 import uk.co.techswitch.services.FilmsService;
 
 import javax.ws.rs.GET;

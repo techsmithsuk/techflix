@@ -1,20 +1,24 @@
 package uk.co.techswitch.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.time.LocalDate;
 
 public class Film {
     private String id;
     private String title;
     private String summary;
-    private LocalDate releaseDate;
+    private String releaseDate;
     private String bannerImage;
     private String posterImage;
     private String video;
 
+    public Film() { }
+
     public Film(String id,
                 String title,
                 String summary,
-                LocalDate releaseDate,
+                String releaseDate,
                 String bannerImage,
                 String posterImage,
                 String video) {
@@ -39,7 +43,7 @@ public class Film {
         return summary;
     }
 
-    public LocalDate getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 

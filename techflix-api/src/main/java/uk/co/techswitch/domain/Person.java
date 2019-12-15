@@ -6,6 +6,8 @@ public class Person {
     private String bannerImage;
     private String posterImage;
 
+    public Person() { }
+
     public Person(String id, String name, String bannerImage, String posterImage) {
         this.id = id;
         this.name = name;
