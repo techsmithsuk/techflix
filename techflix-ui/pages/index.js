@@ -1,17 +1,10 @@
 import React from "react";
-import {NavBar} from "../components/navBar";
+import {Page} from "../components/page";
 
 export default function Index() {
     return (
-        <div>
-            <style jsx global>{`
-                body {
-                    margin: 0;
-                }
-            `}
-            </style>
-            <NavBar/>
+        <Page>
             Hello World
-        </div>
+        </Page>
     );
 }
