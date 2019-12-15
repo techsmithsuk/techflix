@@ -9,7 +9,8 @@ const pageStyle = {
 };
 
 const contentStyle = {
-    ...contentWidth(),
+    'max-width': '1000px',
+    'margin': 'auto'
 };
 
 export function Page(props) {
@@ -21,8 +22,8 @@ export function Page(props) {
                 }
             `}
             </style>
-            <NavBar/>
             <div style={contentStyle}>
+                <NavBar/>
                 {props.children}
             </div>
         </main>
