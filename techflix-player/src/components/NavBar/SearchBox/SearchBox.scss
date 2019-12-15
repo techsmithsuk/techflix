@@ -1,0 +1,39 @@
+@import "../../../styles/constants";
+
+.SearchBox {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  .searchInput {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: $color-foreground 1px solid;
+    font-size: 20px;
+    padding: 0;
+    color: $color-foreground;
+    transition: 0.2s ease all;
+  }
+
+  .submitButton {
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    margin: 0 0 0 $spacing-small;
+    padding: 0;
+    width: 40px;
+  }
+
+  .visuallyHidden {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &:active, &:focus, &:hover {
+    .searchInput {
+      border-color: $color-primary;
+    }
+  }
+}

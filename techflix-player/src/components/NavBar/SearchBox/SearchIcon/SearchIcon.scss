@@ -1,0 +1,17 @@
+@import '../../../../styles/constants';
+
+.SearchIcon {
+  height: 100%;
+  width: 100%;
+
+  .path {
+    fill: $color-foreground;
+    transition: 0.2s ease all;
+  }
+
+  &:hover, &:active, &:focus {
+    .path {
+      fill: $color-primary;
+    }
+  }
+}
