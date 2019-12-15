@@ -1,0 +1,45 @@
+import React from 'react';
+import {COLORS, FONT} from "./styles/constants";
+
+const welcomeBannerStyle = {
+    'height': '400px',
+    'position': 'fixed',
+};
+
+const imageStyle = {
+    'height': '100%',
+    'width': '100%',
+    'object-fit': 'cover',
+    'object-position': 'center',
+};
+
+const messageStyle = {
+    'position': 'absolute',
+    'max-width': '60%',
+    'bottom': '20px',
+    'left': '20px',
+    'padding': '20px',
+    'background': 'rgba(0,0,0,0.7)',
+};
+
+const titleStyle = {
+    ...FONT.title,
+    'color': COLORS.foreground
+};
+
+const descriptionStyle = {
+    ...FONT.body,
+    'color': COLORS.foreground,
+};
+
+export function WelcomeBanner() {
+    return (
+        <div style={welcomeBannerStyle}>
+            <img style={imageStyle} src="https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg"/>
+            <div style={messageStyle}>
+                <h1 style={titleStyle}>Star Wars: The Rise of Skywalker</h1>
+                <p style={descriptionStyle}>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.</p>
+            </div>
+        </div>
+    );
+}
