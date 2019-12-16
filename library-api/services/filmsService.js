@@ -5,7 +5,7 @@ const starWars1 = {
     releaseDate: "15-07-1999",
     bannerImage: "https://m.media-amazon.com/images/M/MV5BMTMxNjc0NTg5OV5BMl5BanBnXkFtZTcwMzgyMzA4NA@@._V1_.jpg",
     posterImage: "https://m.media-amazon.com/images/M/MV5BNjE1NmJhMmUtMjA2Yy00YjFjLTg0NGUtZDkzN2ExMTU4OGNkXkEyXkFqcGdeQXVyNDUzNzIxMzk@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
-    video: "https://youtu.be/bD7bpG-zDJQ",
+    video: "https://www.youtube.com/embed/bD7bpG-zDJQ",
 };
 
 const starWars9 = {
@@ -15,7 +15,7 @@ const starWars9 = {
     releaseDate: "19-12-2019",
     bannerImage: "https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg",
     posterImage: "https://m.media-amazon.com/images/M/MV5BN2Q3OTk3ZWItN2RiOC00MTk5LThjYzMtMGUxZDE4YTBmMGU3XkEyXkFqcGdeQXVyMjM0NDg3NTE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
-    video: "https://youtu.be/8Qn_spdM5Zg",
+    video: "https://www.youtube.com/embed/8Qn_spdM5Zg",
 };
 
 const liamNeeson = {
