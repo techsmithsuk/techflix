@@ -24,4 +24,8 @@ public class PersonModel {
     public String getPosterImage() {
         return person.getPosterImage();
     }
+
+    public String getImdbLink() {
+        return person.getImdbLink();
+    }
 }

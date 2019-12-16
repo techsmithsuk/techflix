@@ -7,8 +7,8 @@ public class PersonDetails extends Person {
 
     public PersonDetails() { }
 
-    public PersonDetails(String id, String name, String bannerImage, String posterImage, List<Film> films) {
-        super(id, name, bannerImage, posterImage);
+    public PersonDetails(String id, String name, String bannerImage, String posterImage, String imdbLink, List<Film> films) {
+        super(id, name, bannerImage, posterImage, imdbLink);
         this.films = films;
     }
 

@@ -6,6 +6,7 @@ const starWars1 = {
     bannerImage: "https://m.media-amazon.com/images/M/MV5BMTMxNjc0NTg5OV5BMl5BanBnXkFtZTcwMzgyMzA4NA@@._V1_.jpg",
     posterImage: "https://m.media-amazon.com/images/M/MV5BNjE1NmJhMmUtMjA2Yy00YjFjLTg0NGUtZDkzN2ExMTU4OGNkXkEyXkFqcGdeQXVyNDUzNzIxMzk@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
     video: "https://www.youtube.com/embed/bD7bpG-zDJQ",
+    imdbLink: "https://www.imdb.com/title/tt0120915/",
 };
 
 const starWars9 = {
@@ -16,21 +17,23 @@ const starWars9 = {
     bannerImage: "https://m.media-amazon.com/images/M/MV5BZmQ2YzJlZTUtZWYzMi00ZjJjLWJkMjEtYjU4NjRiNDU4ZTVmXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_.jpg",
     posterImage: "https://m.media-amazon.com/images/M/MV5BN2Q3OTk3ZWItN2RiOC00MTk5LThjYzMtMGUxZDE4YTBmMGU3XkEyXkFqcGdeQXVyMjM0NDg3NTE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
     video: "https://www.youtube.com/embed/8Qn_spdM5Zg",
+    imdbLink: "https://www.imdb.com/title/tt2527338/",
 };
 
 const liamNeeson = {
     id: "3994453f-522d-4224-a52b-44bbf44f4df4",
     name: "Liam Neeson",
     bannerImage: "https://m.media-amazon.com/images/M/MV5BMTEwZjA4YzctYjljNC00OWVhLWEyYjAtZjYyN2NlZjRmYzAwXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg",
-    posterImage: "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg"
+    posterImage: "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg",
+    imdbLink: "https://www.imdb.com/name/nm5397459",
 };
 
 const daiseyRidley = {
     id: "f16ee238-9920-4ff7-84f1-8bb9e5ebe884",
     name: "Daisey Ridley",
     bannerImage: "https://m.media-amazon.com/images/M/MV5BZjA0Y2RkYTEtNjc3Mi00ZWY2LTg0N2ItMmVjNGMzNTVlYzI4XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
-    posterImage: "https://m.media-amazon.com/images/M/MV5BMTgzMDk3MjI4OF5BMl5BanBnXkFtZTgwMzQxMDY5NjE@._V1_SY1000_CR0,0,799,1000_AL_.jpg"
-
+    posterImage: "https://m.media-amazon.com/images/M/MV5BMTgzMDk3MjI4OF5BMl5BanBnXkFtZTgwMzQxMDY5NjE@._V1_SY1000_CR0,0,799,1000_AL_.jpg",
+    imdbLink: "https://www.imdb.com/name/nm0000553",
 };
 
 const allFilms = [

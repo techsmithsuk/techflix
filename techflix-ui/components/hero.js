@@ -15,7 +15,8 @@ const imageStyle = {
 
 const titleStyle = {
     ...FONT.title,
-    color: COLORS.foreground
+    "color": COLORS.foreground,
+    "margin-bottom": 0,
 };
 
 const PROFILE_IMAGE_WIDTH = '200';
@@ -43,6 +44,14 @@ const buttonStyle = {
     'display': 'inline-block',
 };
 
+const linkStyle = {
+    ...FONT.body,
+    "color": COLORS.primary,
+    "margin-bottom": MARGIN.medium,
+    "display": "block",
+    "text-decoration": "none",
+};
+
 export function Hero(props) {
     return (
         <section style={heroSectionStyle}>
@@ -51,6 +60,7 @@ export function Hero(props) {
                 <img style={profileImageStyle} src={props.profile}/>
             </div>
             <h1 style={titleStyle}>{props.title}</h1>
+            <a style={linkStyle} href={props.imdbLink} target="_blank">View on IMDb</a>
             {props.watchNowId && <a style={buttonStyle} href={`http://localhost:3001/${props.watchNowId}`}>Watch Now</a>}
         </section>
     );

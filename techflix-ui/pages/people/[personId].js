@@ -9,7 +9,7 @@ function Person(props) {
     return (
         <Page>
             <div>{props.name}</div>
-            <Hero title={props.name} banner={props.bannerImage} profile={props.posterImage}/>
+            <Hero title={props.name} banner={props.bannerImage} profile={props.posterImage} imdbLink={props.imdbLink}/>
             <CardRow title={"Films"} cards={props.films.map(film => <Card href={`/films/${film.id}`} image={film.posterImage}/>)}/>
         </Page>
     );

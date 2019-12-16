@@ -12,6 +12,7 @@ public class Film {
     private String bannerImage;
     private String posterImage;
     private String video;
+    private String imdbLink;
 
     public Film() { }
 
@@ -21,7 +22,8 @@ public class Film {
                 String releaseDate,
                 String bannerImage,
                 String posterImage,
-                String video) {
+                String video,
+                String imdbLink) {
         this.id = id;
         this.title = title;
         this.summary = summary;
@@ -57,5 +59,9 @@ public class Film {
 
     public String getVideo() {
         return video;
+    }
+
+    public String getImdbLink() {
+        return imdbLink;
     }
 }
