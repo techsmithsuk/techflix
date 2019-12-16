@@ -1,7 +1,9 @@
 package uk.co.techswitch.repos;
 
 import uk.co.techswitch.domain.Film;
+import uk.co.techswitch.domain.FilmDetails;
 import uk.co.techswitch.domain.Person;
+import uk.co.techswitch.domain.PersonDetails;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.core.GenericType;
@@ -29,17 +31,17 @@ public class LibraryApiClient {
                 .get(new GenericType<>() {});
     }
 
-    public Film getFilm(String id) {
+    public FilmDetails getFilm(String id) {
         return client
                 .target("http://localhost:8000/films/" + id)
                 .request(MediaType.APPLICATION_JSON_TYPE)
-                .get(Film.class);
+                .get(FilmDetails.class);
     }
 
-    public Person getPerson(String id) {
+    public PersonDetails getPerson(String id) {
         return client
                 .target("http://localhost:8000/people/" + id)
                 .request(MediaType.APPLICATION_JSON_TYPE)
-                .get(Person.class);
+                .get(PersonDetails.class);
     }
 }

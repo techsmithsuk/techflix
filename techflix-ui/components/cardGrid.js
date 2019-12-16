@@ -43,7 +43,7 @@ export function CardGrid(props) {
         <section style={sectionStyle}>
             <h2 style={sectionTitleStyle}>{props.title}</h2>
             <ol style={gridStyle}>
-                {props.cards.map(card => <li style={cardStyle}>{card}</li>)}
+                {props.cards.map((card, index) => <li key={index} style={cardStyle}>{card}</li>)}
             </ol>
         </section>
     );
@@ -54,7 +54,7 @@ export function CardRow(props) {
         <section style={sectionStyle}>
             <h2 style={sectionTitleStyle}>{props.title}</h2>
             <ol style={rowStyle}>
-                {props.cards.map(card => <li style={cardStyle}>{card}</li>)}
+                {props.cards.map((card, index) => <li key={index} style={cardStyle}>{card}</li>)}
             </ol>
         </section>
     );

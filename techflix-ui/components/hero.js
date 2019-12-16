@@ -51,7 +51,7 @@ export function Hero(props) {
                 <img style={profileImageStyle} src={props.profile}/>
             </div>
             <h1 style={titleStyle}>{props.title}</h1>
-            <a style={buttonStyle} href={"http://localhost:3001/1"}>Watch Now</a>
+            {props.watchNowId && <a style={buttonStyle} href={`http://localhost:3001/${props.watchNowId}`}>Watch Now</a>}
         </section>
     );
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 const cardStyle = {
     'overflow': 'hidden',
     'position': 'relative',
+    'height': '100%',
 };
 
 const imageStyle = {

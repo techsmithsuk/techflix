@@ -22,7 +22,7 @@ const liamNeeson = {
     id: "3994453f-522d-4224-a52b-44bbf44f4df4",
     name: "Liam Neeson",
     bannerImage: "https://m.media-amazon.com/images/M/MV5BMTEwZjA4YzctYjljNC00OWVhLWEyYjAtZjYyN2NlZjRmYzAwXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg",
-    posterImage: "https://www.imdb.com/name/nm0000553/mediaviewer/rm4076796160?ref_=nm_ov_ph"
+    posterImage: "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg"
 };
 
 const daiseyRidley = {

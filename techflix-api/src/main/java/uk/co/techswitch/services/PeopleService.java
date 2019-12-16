@@ -1,5 +1,9 @@
 package uk.co.techswitch.services;
 
+import uk.co.techswitch.domain.FilmDetails;
+import uk.co.techswitch.domain.PersonDetails;
+import uk.co.techswitch.models.FilmDetailsModel;
+import uk.co.techswitch.models.PersonDetailsModel;
 import uk.co.techswitch.models.PersonModel;
 import uk.co.techswitch.repos.LibraryApiClient;
 
@@ -22,5 +26,10 @@ public class PeopleService {
                 .stream()
                 .map(PersonModel::new)
                 .collect(Collectors.toList());
+    }
+
+    public PersonDetailsModel getPerson(String id) {
+        PersonDetails film = libraryApiClient.getPerson(id);
+        return new PersonDetailsModel(film);
     }
 }

@@ -1,5 +1,8 @@
 package uk.co.techswitch.services;
 
+import uk.co.techswitch.domain.Film;
+import uk.co.techswitch.domain.FilmDetails;
+import uk.co.techswitch.models.FilmDetailsModel;
 import uk.co.techswitch.models.FilmModel;
 import uk.co.techswitch.repos.LibraryApiClient;
 
@@ -22,5 +25,10 @@ public class FilmsService {
                 .stream()
                 .map(FilmModel::new)
                 .collect(Collectors.toList());
+    }
+
+    public FilmDetailsModel getFilm(String id) {
+        FilmDetails film = libraryApiClient.getFilm(id);
+        return new FilmDetailsModel(film);
     }
 }
