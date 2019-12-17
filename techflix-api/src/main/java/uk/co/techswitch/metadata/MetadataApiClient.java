@@ -16,7 +16,7 @@ public class MetadataApiClient {
     }
 
     public FilmMetadata getFilmMetadata(Long tmdbId) {
-        return client.target(baseUrl + "/movie/" + tmdbId)
+        return client.target(baseUrl + "/film/" + tmdbId)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(FilmMetadata.class);
     }

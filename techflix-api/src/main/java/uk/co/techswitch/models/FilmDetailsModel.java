@@ -3,6 +3,8 @@ package uk.co.techswitch.models;
 import uk.co.techswitch.library.models.FilmWithCredits;
 import uk.co.techswitch.library.models.ROLE;
 import uk.co.techswitch.metadata.models.FilmMetadata;
+import uk.co.techswitch.ratings.models.FilmRating;
+import uk.co.techswitch.ratings.models.Review;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,10 +12,12 @@ import java.util.stream.Collectors;
 public class FilmDetailsModel {
     private final FilmWithCredits film;
     private final FilmMetadata metadata;
+    private final FilmRating rating;
 
-    public FilmDetailsModel(FilmWithCredits film, FilmMetadata metadata) {
+    public FilmDetailsModel(FilmWithCredits film, FilmMetadata metadata, FilmRating rating) {
         this.film = film;
         this.metadata = metadata;
+        this.rating = rating;
     }
 
     public String getId() {
@@ -80,5 +84,17 @@ public class FilmDetailsModel {
 
     public String getTagline() {
         return metadata.getTagline();
+    }
+
+    public Double getRating() {
+        return rating.getRating();
+    }
+
+    public Integer getNumberOfRatings() {
+        return rating.getNumberOfRatings();
+    }
+
+    public List<Review> getReviews() {
+        return rating.getReviews();
     }
 }

@@ -10,6 +10,7 @@ import uk.co.techswitch.controllers.FilmsController;
 import uk.co.techswitch.controllers.PeopleController;
 import uk.co.techswitch.library.LibraryApiClient;
 import uk.co.techswitch.metadata.MetadataApiClient;
+import uk.co.techswitch.ratings.RatingsApiClient;
 import uk.co.techswitch.services.FilmsService;
 import uk.co.techswitch.services.PeopleService;
 
@@ -32,9 +33,10 @@ public class Api extends Application<Configuration> {
         Client client = JerseyClientBuilder.newBuilder().build();
         LibraryApiClient libraryApiClient = new LibraryApiClient(client, System.getenv("LIBRARY_SERVICE_URL"));
         MetadataApiClient metadataApiClient = new MetadataApiClient(client, System.getenv("METADATA_SERVICE_URL"));
+        RatingsApiClient ratingsApiClient = new RatingsApiClient(client, System.getenv("RATINGS_SERVICE_URL"));
 
         // Services
-        FilmsService filmsService = new FilmsService(libraryApiClient, metadataApiClient);
+        FilmsService filmsService = new FilmsService(libraryApiClient, metadataApiClient, ratingsApiClient);
         PeopleService peopleService = new PeopleService(libraryApiClient, metadataApiClient);
 
         // Controllers
