@@ -8,7 +8,7 @@ services:
             - library
             - reviews
     library:
-        build: 'library-api'
+        build: 'library-service'
         ports:
             - "8000:3000"
     reviews:
