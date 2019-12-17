@@ -1,6 +1,6 @@
 package uk.co.techswitch.models;
 
-import uk.co.techswitch.domain.Person;
+import uk.co.techswitch.library.models.Person;
 
 public class PersonModel {
     private Person person;
@@ -17,15 +17,7 @@ public class PersonModel {
         return person.getName();
     }
 
-    public String getBannerImage() {
-        return person.getBannerImage();
-    }
-
     public String getPosterImage() {
         return person.getPosterImage();
-    }
-
-    public String getImdbLink() {
-        return person.getImdbLink();
     }
 }

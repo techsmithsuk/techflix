@@ -1,20 +1,49 @@
 package uk.co.techswitch.models;
 
-import org.joda.time.Period;
-import uk.co.techswitch.domain.PersonDetails;
+import uk.co.techswitch.library.models.PersonWithRoles;
+import uk.co.techswitch.library.models.ROLE;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PersonDetailsModel extends PersonModel {
-    private final List<FilmModel> films;
+public class PersonDetailsModel {
+    private final PersonWithRoles person;
 
-    public PersonDetailsModel(PersonDetails person) {
-        super(person);
-        this.films = person.getFilms().stream().map(FilmModel::new).collect(Collectors.toList());
+    public PersonDetailsModel(PersonWithRoles person) {
+        this.person = person;
     }
 
-    public List<FilmModel> getFilms() {
-        return films;
+    public String getId() {
+        return person.getId();
+    }
+
+    public String getName() {
+        return person.getName();
+    }
+
+    public String getPosterImage() {
+        return person.getPosterImage();
+    }
+
+    public String getBannerImage() {
+        return person.getBannerImage();
+    }
+
+    public Long getTmdbId() {
+        return person.getTmdbId();
+    }
+
+    public List<FilmModel> getActorIn() {
+        return person.getRoles().getOrDefault(ROLE.ACTOR, List.of())
+                .stream()
+                .map(FilmModel::new)
+                .collect(Collectors.toList());
+    }
+
+    public List<FilmModel> getDirected() {
+        return person.getRoles().getOrDefault(ROLE.DIRECTOR, List.of())
+                .stream()
+                .map(FilmModel::new)
+                .collect(Collectors.toList());
     }
 }

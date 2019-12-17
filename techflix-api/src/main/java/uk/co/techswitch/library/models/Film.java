@@ -1,35 +1,26 @@
-package uk.co.techswitch.domain;
+package uk.co.techswitch.library.models;
 
 public class Film {
     private String id;
     private String title;
-    private String summary;
-    private String releaseDate;
     private String bannerImage;
     private String posterImage;
     private String video;
-    private String imdbLink;
     private Long tmdbId;
 
     public Film() { }
 
     public Film(String id,
                 String title,
-                String summary,
-                String releaseDate,
                 String bannerImage,
                 String posterImage,
                 String video,
-                String imdbLink,
                 Long tmdbId) {
         this.id = id;
         this.title = title;
-        this.summary = summary;
-        this.releaseDate = releaseDate;
         this.bannerImage = bannerImage;
         this.posterImage = posterImage;
         this.video = video;
-        this.imdbLink = imdbLink;
         this.tmdbId = tmdbId;
     }
 
@@ -39,14 +30,6 @@ public class Film {
 
     public String getTitle() {
         return title;
-    }
-
-    public String getSummary() {
-        return summary;
-    }
-
-    public String getReleaseDate() {
-        return releaseDate;
     }
 
     public String getBannerImage() {
@@ -61,11 +44,7 @@ public class Film {
         return video;
     }
 
-    public String getImdbLink() {
-        return imdbLink;
-    }
-
-    public Long getTMDbId() {
+    public Long getTmdbId() {
         return tmdbId;
     }
 }

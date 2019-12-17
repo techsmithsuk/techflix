@@ -1,20 +1,20 @@
-package uk.co.techswitch.domain;
+package uk.co.techswitch.library.models;
 
 public class Person {
     private String id;
     private String name;
     private String bannerImage;
     private String posterImage;
-    private String imdbLink;
+    private Long tmdbId;
 
     public Person() { }
 
-    public Person(String id, String name, String bannerImage, String posterImage, String imdbLink) {
+    public Person(String id, String name, String bannerImage, String posterImage, Long tmdbId) {
         this.id = id;
         this.name = name;
         this.bannerImage = bannerImage;
         this.posterImage = posterImage;
-        this.imdbLink = imdbLink;
+        this.tmdbId = tmdbId;
     }
 
     public String getId() {
@@ -33,7 +33,7 @@ public class Person {
         return posterImage;
     }
 
-    public String getImdbLink() {
-        return imdbLink;
+    public Long getTmdbId() {
+        return tmdbId;
     }
 }

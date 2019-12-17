@@ -1,6 +1,6 @@
 package uk.co.techswitch.models;
 
-import uk.co.techswitch.domain.Film;
+import uk.co.techswitch.library.models.Film;
 
 
 public class FilmModel {
@@ -18,27 +18,7 @@ public class FilmModel {
         return film.getTitle();
     }
 
-    public String getSummary() {
-        return film.getSummary();
-    }
-
-    public String getReleaseDate() {
-        return film.getReleaseDate();
-    }
-
-    public String getBannerImage() {
-        return film.getBannerImage();
-    }
-
     public String getPosterImage() {
         return film.getPosterImage();
-    }
-
-    public String getVideo() {
-        return film.getVideo();
-    }
-
-    public String getImdbLink() {
-        return film.getImdbLink();
     }
 }
