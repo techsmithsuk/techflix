@@ -17,30 +17,36 @@ public class LibraryApiClient {
         this.client = client;
     }
 
+    public List<Film> test(String url) {
+        return client.target(url)
+                .request(MediaType.APPLICATION_JSON_TYPE)
+                .get(new GenericType<>() {});
+    }
+
     public List<Film> getAllFilms(int limit, int offset) {
         return client
-                .target("http://localhost:8000/films")
+                .target("http://library/films")
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(new GenericType<>() {});
     }
 
     public List<Person> getAllPeople(int limit, int offset) {
         return client
-                .target("http://localhost:8000/people")
+                .target("http://library/people")
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(new GenericType<>() {});
     }
 
     public FilmDetails getFilm(String id) {
         return client
-                .target("http://localhost:8000/films/" + id)
+                .target("http://library/films/" + id)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(FilmDetails.class);
     }
 
     public PersonDetails getPerson(String id) {
         return client
-                .target("http://localhost:8000/people/" + id)
+                .target("http://library/people/" + id)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(PersonDetails.class);
     }

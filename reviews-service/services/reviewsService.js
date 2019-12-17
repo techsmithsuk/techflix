@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.TMDB_API_KEY;
 
 async function getReviewsForFilm(filmId) {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${filmId}/reviews?api_key=${apiKey}&language=en-US`);

@@ -4,3 +4,5 @@
 */.gradle
 
 /techflix-ui/.next
+
+docker-secret.env

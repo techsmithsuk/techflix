@@ -18,6 +18,14 @@ public class FilmsService {
         this.libraryApiClient = libraryApiClient;
     }
 
+    public List<FilmModel> test(String test) {
+        return libraryApiClient
+                .test(test)
+                .stream()
+                .map(FilmModel::new)
+                .collect(Collectors.toList());
+    }
+
     public List<FilmModel> getFilms(int page) {
         int offset = FILMS_PER_PAGE * (page - 1);
         return libraryApiClient

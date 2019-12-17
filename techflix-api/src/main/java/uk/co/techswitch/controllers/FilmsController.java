@@ -25,6 +25,12 @@ public class FilmsController {
     }
 
     @GET
+    @Path("test")
+    public List<FilmModel> test(@QueryParam("url") String url) {
+        return filmsService.test(url);
+    }
+
+    @GET
     @Path("/{id}")
     public FilmDetailsModel getFilm(@PathParam("id") String id) {
         return filmsService.getFilm(id);
