@@ -11,8 +11,8 @@ services:
         build: 'library-service'
         ports:
             - "8000:3000"
-    reviews:
-        build: 'reviews-service'
+    ratings:
+        build: 'ratings-service'
         ports:
             - "8001:3000"
         env_file: 
