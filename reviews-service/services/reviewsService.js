@@ -5,14 +5,12 @@ const apiKey = process.env.API_KEY;
 async function getReviewsForFilm(filmId) {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${filmId}/reviews?api_key=${apiKey}&language=en-US`);
     const json = await response.json();
-    console.log(json);
     return json.results;
 }
 
 async function getRatingsForFilm(filmId) {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${filmId}?api_key=${apiKey}&language=en-US`);
     const json = await response.json();
-    console.log(json);
     return { voteCount: json.vote_count, voteAverage: json.vote_average };
 }
 
