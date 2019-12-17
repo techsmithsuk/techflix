@@ -9,6 +9,7 @@ import org.glassfish.jersey.client.JerseyClientBuilder;
 import uk.co.techswitch.controllers.FilmsController;
 import uk.co.techswitch.controllers.PeopleController;
 import uk.co.techswitch.library.LibraryApiClient;
+import uk.co.techswitch.metadata.MetadataApiClient;
 import uk.co.techswitch.services.FilmsService;
 import uk.co.techswitch.services.PeopleService;
 
@@ -27,13 +28,14 @@ public class Api extends Application<Configuration> {
     public void run(Configuration configuration, Environment environment) throws Exception {
         environment.getObjectMapper().registerModule(new JavaTimeModule());
 
-        // Repos
+        // Api Clients
         Client client = JerseyClientBuilder.newBuilder().build();
         LibraryApiClient libraryApiClient = new LibraryApiClient(client, System.getenv("LIBRARY_SERVICE_URL"));
+        MetadataApiClient metadataApiClient = new MetadataApiClient(client, System.getenv("METADATA_SERVICE_URL"));
 
         // Services
-        FilmsService filmsService = new FilmsService(libraryApiClient);
-        PeopleService peopleService = new PeopleService(libraryApiClient);
+        FilmsService filmsService = new FilmsService(libraryApiClient, metadataApiClient);
+        PeopleService peopleService = new PeopleService(libraryApiClient, metadataApiClient);
 
         // Controllers
         FilmsController filmsController = new FilmsController(filmsService);

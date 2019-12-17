@@ -1,6 +1,8 @@
 package uk.co.techswitch.services;
 
 import uk.co.techswitch.library.models.FilmWithCredits;
+import uk.co.techswitch.metadata.MetadataApiClient;
+import uk.co.techswitch.metadata.models.FilmMetadata;
 import uk.co.techswitch.models.FilmDetailsModel;
 import uk.co.techswitch.models.FilmModel;
 import uk.co.techswitch.models.SearchModel;
@@ -11,9 +13,11 @@ import java.util.stream.Collectors;
 
 public class FilmsService {
     private final LibraryApiClient libraryApiClient;
+    private final MetadataApiClient metadataApiClient;
 
-    public FilmsService(LibraryApiClient libraryApiClient) {
+    public FilmsService(LibraryApiClient libraryApiClient, MetadataApiClient metadataApiClient) {
         this.libraryApiClient = libraryApiClient;
+        this.metadataApiClient = metadataApiClient;
     }
 
     public List<FilmModel> getFilms(SearchModel searchModel) {
@@ -26,6 +30,7 @@ public class FilmsService {
 
     public FilmDetailsModel getFilm(String id) {
         FilmWithCredits film = libraryApiClient.getFilm(id);
-        return new FilmDetailsModel(film);
+        FilmMetadata metadata = metadataApiClient.getFilmMetadata(film.getTmdbId());
+        return new FilmDetailsModel(film, metadata);
     }
 }

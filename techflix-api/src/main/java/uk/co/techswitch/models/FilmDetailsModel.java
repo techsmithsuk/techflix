@@ -2,16 +2,18 @@ package uk.co.techswitch.models;
 
 import uk.co.techswitch.library.models.FilmWithCredits;
 import uk.co.techswitch.library.models.ROLE;
+import uk.co.techswitch.metadata.models.FilmMetadata;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class FilmDetailsModel {
     private final FilmWithCredits film;
+    private final FilmMetadata metadata;
 
-    public FilmDetailsModel(FilmWithCredits film) {
+    public FilmDetailsModel(FilmWithCredits film, FilmMetadata metadata) {
         this.film = film;
+        this.metadata = metadata;
     }
 
     public String getId() {
@@ -50,5 +52,33 @@ public class FilmDetailsModel {
                 .stream()
                 .map(PersonModel::new)
                 .collect(Collectors.toList());
+    }
+
+    public String getImdbId() {
+        return metadata.getImdbId();
+    }
+
+    public String getOverview() {
+        return metadata.getOverview();
+    }
+
+    public String getReleaseDate() {
+        return metadata.getReleaseDate();
+    }
+
+    public Long getBudget() {
+        return metadata.getBudget();
+    }
+
+    public Long getRevenue() {
+        return metadata.getRevenue();
+    }
+
+    public Long getRuntime() {
+        return metadata.getRuntime();
+    }
+
+    public String getTagline() {
+        return metadata.getTagline();
     }
 }

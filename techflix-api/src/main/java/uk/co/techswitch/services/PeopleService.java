@@ -1,6 +1,8 @@
 package uk.co.techswitch.services;
 
 import uk.co.techswitch.library.models.PersonWithRoles;
+import uk.co.techswitch.metadata.MetadataApiClient;
+import uk.co.techswitch.metadata.models.PersonMetadata;
 import uk.co.techswitch.models.PersonDetailsModel;
 import uk.co.techswitch.models.PersonModel;
 import uk.co.techswitch.library.LibraryApiClient;
@@ -11,9 +13,11 @@ import java.util.stream.Collectors;
 
 public class PeopleService {
     private final LibraryApiClient libraryApiClient;
+    private final MetadataApiClient metadataApiClient;
 
-    public PeopleService(LibraryApiClient libraryApiClient) {
+    public PeopleService(LibraryApiClient libraryApiClient, MetadataApiClient metadataApiClient) {
         this.libraryApiClient = libraryApiClient;
+        this.metadataApiClient = metadataApiClient;
     }
 
     public List<PersonModel> getPeople(SearchModel searchModel) {
@@ -26,6 +30,7 @@ public class PeopleService {
 
     public PersonDetailsModel getPerson(String id) {
         PersonWithRoles person = libraryApiClient.getPerson(id);
-        return new PersonDetailsModel(person);
+        PersonMetadata metadata = metadataApiClient.getPersonMetadata(person.getTmdbId());
+        return new PersonDetailsModel(person, metadata);
     }
 }
