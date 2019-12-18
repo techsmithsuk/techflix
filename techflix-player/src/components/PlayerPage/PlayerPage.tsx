@@ -33,13 +33,11 @@ type FilmDetails = {
     video: string,
 }
 
-const apiUrl = process.env.API_URL
-
 async function fetchFilmDetails(id?: string): Promise<FilmDetails|null> {
     if (!id) {
         return null;
     }
-    const response = await fetch(`${apiUrl}/films/${id}`);
+    const response = await fetch(`http://localhost:8080/films/${id}`);
     return await response.json();
 }
 

@@ -3,6 +3,7 @@ import {Page} from "../../components/page";
 import {Hero} from "../../components/hero";
 import {CardRow} from "../../components/cardGrid";
 import {Card} from "../../components/card";
+import fetch from 'isomorphic-fetch';
 
 const apiUrl = process.env.API_URL
 
