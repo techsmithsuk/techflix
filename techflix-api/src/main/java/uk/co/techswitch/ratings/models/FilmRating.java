@@ -1,15 +1,20 @@
 package uk.co.techswitch.ratings.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FilmRating {
     private Double rating;
-    private Integer numberOfRatings;
+    private Integer ratingsCount;
     private List<Review> reviews;
 
-    public FilmRating(Double rating, Integer numberOfRatings, List<Review> reviews) {
+    public FilmRating() { }
+
+    public FilmRating(Double rating, Integer ratingsCount, List<Review> reviews) {
         this.rating = rating;
-        this.numberOfRatings = numberOfRatings;
+        this.ratingsCount = ratingsCount;
         this.reviews = reviews;
     }
 
@@ -17,8 +22,8 @@ public class FilmRating {
         return rating;
     }
 
-    public Integer getNumberOfRatings() {
-        return numberOfRatings;
+    public Integer getRatingsCount() {
+        return ratingsCount;
     }
 
     public List<Review> getReviews() {

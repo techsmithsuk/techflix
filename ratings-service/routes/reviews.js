@@ -6,7 +6,7 @@ router.get('/reviews/:id', function(req, res, next) {
     setTimeout(() => {
         reviewsService.getReviewSummary(req.params.id)
             .then(summary => res.json(summary));
-    }, 8000);
+    }, 8);
 });
 
 module.exports = router;

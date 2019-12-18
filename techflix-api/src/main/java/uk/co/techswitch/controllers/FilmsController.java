@@ -21,7 +21,7 @@ public class FilmsController {
     @GET
     @Path("")
     public List<FilmModel> getFilms(SearchModel searchModel) {
-        return filmsService.getFilms(searchModel);
+        return filmsService.getFilms(searchModel == null ? new SearchModel() : searchModel);
     }
 
     @GET

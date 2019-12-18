@@ -15,7 +15,7 @@ public class RatingsApiClient {
     }
 
     public FilmRating getFilmRating(Long tmdbId) {
-        return client.target(baseUrl + "/film/" + tmdbId)
+        return client.target(baseUrl + "/reviews/" + tmdbId)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(FilmRating.class);
     }

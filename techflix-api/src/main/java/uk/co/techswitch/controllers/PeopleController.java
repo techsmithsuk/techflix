@@ -21,7 +21,7 @@ public class PeopleController {
     @GET
     @Path("")
     public List<PersonModel> getPeople(SearchModel searchModel) {
-        return peopleService.getPeople(searchModel);
+        return peopleService.getPeople(searchModel == null ? new SearchModel() : searchModel);
     }
 
     @GET

@@ -6,14 +6,14 @@ router.get('/films/:id', function(req, res, next) {
     setTimeout(() => {
         metadataService.getFilmMetadata(req.params.id)
             .then(metadata => res.json(metadata));
-    }, 8000);
+    }, 8);
 });
 
 router.get('/people/:id', function(req, res, next) {
     setTimeout(() => {
         metadataService.getPersonMetadata(req.params.id)
             .then(metadata => res.json(metadata));
-    }, 8000);
+    }, 8);
 })
 
 module.exports = router;

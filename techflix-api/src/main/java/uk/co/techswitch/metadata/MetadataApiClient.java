@@ -16,13 +16,13 @@ public class MetadataApiClient {
     }
 
     public FilmMetadata getFilmMetadata(Long tmdbId) {
-        return client.target(baseUrl + "/film/" + tmdbId)
+        return client.target(baseUrl + "/films/" + tmdbId)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(FilmMetadata.class);
     }
 
     public PersonMetadata getPersonMetadata(Long tmdbId) {
-        return client.target(baseUrl + "/person/" + tmdbId)
+        return client.target(baseUrl + "/people/" + tmdbId)
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(PersonMetadata.class);
     }

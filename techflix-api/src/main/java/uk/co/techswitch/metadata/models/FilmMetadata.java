@@ -12,6 +12,8 @@ public class FilmMetadata {
     private Long runtime;
     private String tagline;
 
+    public FilmMetadata() { }
+
     public FilmMetadata(String imdbId, String overview, String releaseDate, Long budget, Long revenue, Long runtime, String tagline) {
         this.imdbId = imdbId;
         this.overview = overview;

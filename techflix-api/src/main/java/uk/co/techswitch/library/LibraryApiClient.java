@@ -21,6 +21,8 @@ public class LibraryApiClient {
     }
 
     public List<Film> getAllFilms(SearchModel searchModel) {
+        System.out.println(baseUrl);
+        System.out.println(searchModel);
         return client
                 .target(baseUrl + "/films")
                 .queryParam("searchTerm", searchModel.getSearchTerm())

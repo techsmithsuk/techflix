@@ -14,6 +14,8 @@ public class PersonMetadata {
     private String placeOfBirth;
     private String imdbId;
 
+    public PersonMetadata() { }
+
     public PersonMetadata(String birthday, String knownForDepartment, String deathDay, List<String> alsoKnownAs, String biography, String placeOfBirth, String imdbId) {
         this.birthday = birthday;
         this.knownForDepartment = knownForDepartment;

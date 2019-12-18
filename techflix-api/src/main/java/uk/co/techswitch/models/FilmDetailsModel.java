@@ -91,7 +91,7 @@ public class FilmDetailsModel {
     }
 
     public Integer getNumberOfRatings() {
-        return rating.getNumberOfRatings();
+        return rating.getRatingsCount();
     }
 
     public List<Review> getReviews() {

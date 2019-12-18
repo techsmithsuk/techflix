@@ -4,19 +4,30 @@ services:
         build: 'techflix-api'
         ports:
             - "8080:8080"
+        env_file:
+            - docker.env
         depends_on: 
             - library
-            - reviews
+            - metadata
+            - ratings
     library:
         build: 'library-service'
         ports:
             - "8000:3000"
-    ratings:
-        build: 'ratings-service'
+    metadata:
+        build: 'metadata-service'
         ports:
             - "8001:3000"
         env_file: 
             - docker.env
+            - docker-secret.env
+    ratings:
+        build: 'ratings-service'
+        ports:
+            - "8002:3000"
+        env_file: 
+            - docker.env
+            - docker-secret.env
     ui:
         build: 'techflix-ui'
         ports:

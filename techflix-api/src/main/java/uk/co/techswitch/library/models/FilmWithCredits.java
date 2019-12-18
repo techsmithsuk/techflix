@@ -6,6 +6,8 @@ import java.util.Map;
 public class FilmWithCredits extends Film {
     private Map<ROLE, List<Person>> credits;
 
+    public FilmWithCredits() { }
+
     public FilmWithCredits(String id,
                            String title,
                            String bannerImage,
