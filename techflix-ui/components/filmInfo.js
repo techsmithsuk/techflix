@@ -11,7 +11,7 @@ export function FilmInfo(props) {
     return (
         <section>
             <h2 style={subtitleInfo}>Info</h2>
-            <Field label={"Synopsis"} value={props.synopsis}/>
+            <Field label={"Synopsis"} value={props.overview}/>
             <Field label={"Release Date"} value={props.releaseDate}/>
             {props.director && <Field label={"Director"} value={props.director.name} href={props.director.page}/>}
         </section>

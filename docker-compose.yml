@@ -32,11 +32,15 @@ services:
         build: 'techflix-ui'
         ports:
             - "3000:3000"
+        env_file:
+            - docker.env
         depends_on: 
             - api
     player:
         build: 'techflix-player'
         ports:
             - "3001:3000"
+        env_file:
+            - docker.env
         depends_on: 
             - api

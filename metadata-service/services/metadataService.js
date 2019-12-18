@@ -8,7 +8,7 @@ async function getFilmMetadata(tmdbId) {
 }
 
 async function getPersonMetadata(tmdbId) {
-    const response = await fetch(`https://api.themoviedb.org/3/people/${tmdbId}?api_key=${apiKey}&language=en-US`);
+    const response = await fetch(`https://api.themoviedb.org/3/person/${tmdbId}?api_key=${apiKey}&language=en-US`);
     return await response.json();
 }
 

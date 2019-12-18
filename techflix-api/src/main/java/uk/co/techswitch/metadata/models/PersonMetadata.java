@@ -1,17 +1,23 @@
 package uk.co.techswitch.metadata.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PersonMetadata {
     private String birthday;
+    @JsonProperty("known_for_department")
     private String knownForDepartment;
+    @JsonProperty("death_day")
     private String deathDay;
+    @JsonProperty("also_known_as")
     private List<String> alsoKnownAs;
     private String biography;
+    @JsonProperty("place_of_birth")
     private String placeOfBirth;
+    @JsonProperty("imdb_id")
     private String imdbId;
 
     public PersonMetadata() { }

@@ -1,11 +1,14 @@
 package uk.co.techswitch.metadata.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FilmMetadata {
+    @JsonProperty("imdb_id")
     private String imdbId;
     private String overview;
+    @JsonProperty("release_date")
     private String releaseDate;
     private Long budget;
     private Long revenue;

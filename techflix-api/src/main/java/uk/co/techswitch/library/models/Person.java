@@ -1,5 +1,8 @@
 package uk.co.techswitch.library.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
     private String id;
     private String name;

@@ -1,8 +1,11 @@
 package uk.co.techswitch.library.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PersonWithRoles extends Person {
     private Map<ROLE, List<Film>> roles;
 

@@ -60,7 +60,7 @@ export function Hero(props) {
                 <img style={profileImageStyle} src={props.profile}/>
             </div>
             <h1 style={titleStyle}>{props.title}</h1>
-            <a style={linkStyle} href={props.imdbLink} target="_blank">View on IMDb</a>
+            <a style={linkStyle} href={props.imdbId} target="_blank">View on IMDb</a>
             {props.watchNowId && <a style={buttonStyle} href={`http://localhost:3001/${props.watchNowId}`}>Watch Now</a>}
         </section>
     );

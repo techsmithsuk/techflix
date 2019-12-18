@@ -30,9 +30,11 @@ function Search(props) {
     );
 }
 
+const apiUrl = process.env.API_URL
+
 Search.getInitialProps = async ({ query }) => {
-    const filmResult = await fetch(`http://localhost:8080/films`);
-    const peopleResult = await fetch(`http://localhost:8080/people`);
+    const filmResult = await fetch(`${apiUrl}/films`);
+    const peopleResult = await fetch(`${apiUrl}/people`);
 
     return {
         searchTerm: query.q,
