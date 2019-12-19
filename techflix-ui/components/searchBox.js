@@ -1,46 +1,46 @@
 import React from 'react';
 import {SearchIcon} from "./searchIcon";
 import {COLORS, MARGIN} from "./styles/constants";
+import styled from 'styled-components';
 
-const searchBoxStyle = {
-    'margin': '0',
-    'padding': '0',
-    'display': 'flex',
-};
+const StyledSearchForm = styled.form `
+    margin: 0;
+    padding: 0;
+    display: flex;
+`;
 
-const visuallyHiddenStyle = {
-    'position': 'absolute',
-    'visibility': 'hidden',
-};
+const StyledViduallyHidden = styled.label `
+    position: absolute;
+    visibility: hidden;
+`;
 
-const searchInputStyle = {
-    'background': 'none',
-    'border': 'none',
-    'outline': 'none',
-    'border-bottom': `${COLORS.foreground} 1px solid`,
-    'font-size': '20px',
-    'padding': '0',
-    'color': COLORS.foreground,
-    'transition': '0.2s ease all',
-};
+const StyledSearchInput = styled.input `
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: ${COLORS.foreground} 1px solid;
+    font-size: 20px;
+    padding: 0;
+    color: ${COLORS.foreground};
+    transition: 0.2s ease all;
+`;
 
-const submitButtonStyle = {
-    'background': 'none',
-    'border': 'none',
-    'outline': 'none',
-    'height': '100%',
-    'margin': `0 0 0 ${MARGIN.small}px`,
-    'padding': '0',
-    'width': '40px',
-};
+const StyledButton = styled.button `
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    margin: 0 0 0 ${MARGIN.small}px;
+    padding: 0;
+    width: 40px;
+`;
 
 export function SearchBox() {
     return (
-        <form style={searchBoxStyle} action="http://localhost:3000/search" method="get">
-            <label htmlFor="searchInput" style={visuallyHiddenStyle}>Search</label>
-            <input id="searchInput" name="q" style={searchInputStyle} placeholder="Search"/>
-
-            <button style={submitButtonStyle} type="submit"><SearchIcon/></button>
-        </form>
+        <StyledSearchForm action="http://localhost:3000/search" method="get">
+            <StyledViduallyHidden htmlFor="searchInput">Search</StyledViduallyHidden>
+            <StyledSearchInput id="searchInput" name="q" placeholder="Search"/>
+            <StyledButton type="submit"><SearchIcon/></StyledButton>
+        </StyledSearchForm>
     );
 }

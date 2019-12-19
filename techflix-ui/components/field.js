@@ -1,28 +1,28 @@
 import React from 'react';
 import {FONT, MARGIN} from "./styles/constants";
 import Link from "next/link";
+import styled from 'styled-components';
 
-const fieldStyles = {
-    'margin-top': MARGIN.medium,
-};
+const StyledField = styled.div `
+    margin-top: ${MARGIN.medium};
+`;
 
-const labelStyle = {
-    ...FONT.label,
-};
+const StyledLabel = styled.div `
+    ${FONT.label}
+`;
 
-const valueStyle = {
-    ...FONT.body
-};
+const StyledValue = styled.div `
+    ${FONT.body}
+`;
 
 export function Field(props) {
     return (
-        <div style={fieldStyles}>
-            <div style={labelStyle}>{props.label}</div>
+        <StyledField>
+            <StyledLabel>{props.label}</StyledLabel>
             {props.href
-                ? <Link href={props.href}><a><div style={valueStyle}>{props.value}</div></a></Link>
-                : <div style={valueStyle}>{props.value}</div>
+                ? <Link href={props.href}><a><StyledValue>{props.value}</StyledValue></a></Link>
+                : <StyledValue>{props.value}</StyledValue>
             }
-
-        </div>
+        </StyledField>
     );
 }

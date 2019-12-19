@@ -6,7 +6,7 @@ import {CardRow} from "../../components/cardGrid";
 import {Card} from "../../components/card";
 import fetch from 'isomorphic-fetch';
 
-const apiUrl = process.env.API_URL
+const apiUrl = process.env.API_URL;
 
 function Film(props) {
 

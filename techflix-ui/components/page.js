@@ -1,30 +1,31 @@
 import React from 'react';
 import {COLORS, CONTENT_WIDTH} from "./styles/constants";
 import {NavBar} from "./navBar";
+import styled from 'styled-components';
 
-const pageStyle = {
-    'background': COLORS.background,
-    'min-height': '100vh'
-};
+const StyledPage = styled.main `
+    background: ${COLORS.background};
+    min-height: 100vh;
+`;
 
-const contentStyle = {
-    'max-width': `${CONTENT_WIDTH}px`,
-    'margin': 'auto'
-};
+const StyledContent = styled.div `
+    max-width: ${CONTENT_WIDTH}px;
+    margin: auto;
+`;
 
 export function Page(props) {
     return (
-        <main style={pageStyle}>
+        <StyledPage>
             <style jsx global>{`
                 body {
                     margin: 0;
                 }
             `}
             </style>
-            <div style={contentStyle}>
+            <StyledContent>
                 <NavBar/>
                 {props.children}
-            </div>
-        </main>
+            </StyledContent>
+        </StyledPage>
     );
 }
