@@ -25,13 +25,25 @@ const StyledName = styled.div `
     background: rgba(0,0,0,0.7);
 `;
 
-export function Card(props) {
+export function FilmCard(props) {
     return (
-        <Link href={props.href}>
+        <Link href="/films/[filmId]" as={`/films/${props.id}`}>
             <a>
                 <StyledCard>
                     <StyledImage src={props.image}/>
-                    {props.name && <StyledName>{props.name}</StyledName>}
+                </StyledCard>
+            </a>
+        </Link>
+    );
+}
+
+export function PersonCard(props) {
+    return (
+        <Link href="/people/[personId]" as={`/people/${props.id}`}>
+            <a>
+                <StyledCard>
+                    <StyledImage src={props.image}/>
+                    <StyledName>{props.name}</StyledName>
                 </StyledCard>
             </a>
         </Link>

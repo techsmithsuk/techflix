@@ -2,9 +2,10 @@ import React from 'react';
 import {Page} from "../components/page";
 import {FONT} from "../components/styles/constants";
 import {CardGrid} from "../components/cardGrid";
-import {Card} from "../components/card";
+import {FilmCard, PersonCard} from "../components/card";
 import fetch from "isomorphic-fetch";
 import styled from 'styled-components';
+import {getUrl} from "../utils/urlUtils";
 
 const StyledTitle = styled.h1 `
     ${FONT.title}
@@ -19,23 +20,24 @@ function Search(props) {
     const hasPeople = props.people.length > 0;
     const hasNoResults = !hasFilms && !hasPeople;
 
+    const filmResults = props.films.map(film => <FilmCard id={film.id} image={film.posterImage}/>);
+    const peopleResults = props.people.map(person => <PersonCard id={person.id} image={person.posterImage} name={person.name}/>);
+
     return (
         <Page>
             <StyledTitle>Search Results: {props.searchTerm}</StyledTitle>
 
             {hasNoResults && <StyledNoResults>Sorry - No results found</StyledNoResults> }
 
-            {hasFilms && <CardGrid title="Films" cards={props.films.map(film => <Card href={`/films/${film.id}`} image={film.posterImage}/>)}/>}
-            {hasPeople && <CardGrid title="People" cards={props.people.map(person => <Card href={`/people/${person.id}`} image={person.posterImage} name={person.name}/>)}/>}
+            {hasFilms && <CardGrid title="Films" cards={filmResults}/>}
+            {hasPeople && <CardGrid title="People" cards={peopleResults}/>}
         </Page>
     );
 }
 
-const apiUrl = process.env.API_URL
-
 Search.getInitialProps = async ({ query }) => {
-    const filmResult = await fetch(`${apiUrl}/films`);
-    const peopleResult = await fetch(`${apiUrl}/people`);
+    const filmResult = await fetch(getUrl(`/films`));
+    const peopleResult = await fetch(getUrl(`/people`));
 
     return {
         searchTerm: query.q,

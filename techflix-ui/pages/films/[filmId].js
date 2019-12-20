@@ -3,10 +3,9 @@ import {Page} from "../../components/page";
 import {Hero} from "../../components/hero";
 import {FilmInfo} from "../../components/filmInfo";
 import {CardRow} from "../../components/cardGrid";
-import {Card} from "../../components/card";
+import {PersonCard} from "../../components/card";
 import fetch from 'isomorphic-fetch';
-
-const apiUrl = process.env.API_URL;
+import {getUrl} from "../../utils/urlUtils";
 
 function Film(props) {
 
@@ -14,13 +13,13 @@ function Film(props) {
         <Page>
             <Hero title={props.title} watchNowId={props.id} banner={props.bannerImage} profile={props.posterImage} imdbLink={props.imdbLink}/>
             <FilmInfo overview={props.overview} releaseDate={props.releaseDate} director={props.director}/>
-            <CardRow title={"Cast"} cards={props.cast.map(person => <Card href={`/people/${person.id}`} image={person.posterImage} name={person.name}/>)}/>
+            <CardRow title={"Cast"} cards={props.cast.map(person => <PersonCard id={person.id} image={person.posterImage} name={person.name}/>)}/>
         </Page>
     );
 }
 
 Film.getInitialProps = async ({ query} ) => {
-    const result = await fetch(`${apiUrl}/films/${query.filmId}`);
+    const result = await fetch(getUrl(`/films/${query.filmId}`));
     return await result.json();
 };
 
